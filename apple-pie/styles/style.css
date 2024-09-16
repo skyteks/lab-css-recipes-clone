@@ -73,18 +73,14 @@ li {
 }
 
 ol {
-  counter-reset: list;
-  margin-left: 5%;
+  list-style: none;
+  margin-left: 3%;
 }
 ol > li {
-  list-style: none;
-  position: relative;
+  counter-increment: listcounter;
 }
 ol > li:before {
-  content: counter(list, decimal) ") ";
-  counter-increment: list;
-  position: absolute;
-  left: -1.4em;
+  content: counter(listcounter) ")";
 }
 footer {
   height: 120px;
@@ -109,10 +105,12 @@ footer {
   height: 90px;
   margin-top: 5%;
   margin-bottom: 4%;
+  display: block;
 }
 
 .info-pic-2 {
   height: 110px;
   margin-top: 5%;
   margin-bottom: 4%;
+  display: block;
 }
